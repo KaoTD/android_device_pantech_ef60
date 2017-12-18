@@ -1,4 +1,4 @@
-# Copyright (C) 2016 The CyanogenMod Project
+# Copyright (C) 2016 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,18 +18,21 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from ef60 device
 $(call inherit-product, device/pantech/ef60/ef60.mk)
 
-# Inherit some common CM stuff.
+# Inherit some common Lineage stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Call the proprietary setup
 $(call inherit-product-if-exists, vendor/pantech/ef60/ef60-vendor.mk)
 
-PRODUCT_NAME := cm_ef60
+PRODUCT_NAME := lineage_ef60
 PRODUCT_DEVICE := ef60
 PRODUCT_MANUFACTURER := PANTECH
-PRODUCT_MODEL := IM-A900
+PRODUCT_MODEL := Vega Secrect UP
 
 PRODUCT_BRAND := PANTECH
 TARGET_VENDOR := PANTECH
 TARGET_VENDOR_PRODUCT_NAME := ef60
 TARGET_VENDOR_DEVICE_NAME := ef60
+
+# Enable SU
+WITH_SU := true

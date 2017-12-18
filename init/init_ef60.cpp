@@ -1,5 +1,5 @@
 /*
-   Copyright (c) 2016, The CyanogenMod Project
+   Copyright (c) 2016, The LineageOS Project
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
    met:
@@ -60,9 +60,6 @@ void vendor_load_properties()
         fclose(fp);
     }
 
-    property_set("persist.sys.usb.control", "disable");
-    property_set("persist.sys.isUsbOtgEnabled", "true");
-    property_set("persist.pantech.usb.version=0", "0");
     property_set("ro.product.model", device_buf);
 
     if (strstr(device_buf, "IM-A900S")) 
