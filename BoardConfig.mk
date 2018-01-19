@@ -19,7 +19,7 @@ PLATFORM_PATH := device/pantech/ef60
 -include device/pantech/msm8974-common/BoardConfigCommon.mk
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := ef62l,ef60s,ef61k
+TARGET_OTA_ASSERT_DEVICE := ef62l,ef60s,ef61k,ef60,ef61,ef62
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(PLATFORM_PATH)/bluetooth
@@ -36,10 +36,6 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 11757140992
 # Include path
 TARGET_SPECIFIC_HEADER_PATH += $(PLATFORM_PATH)/include
 
-#Ril
-BOARD_GLOBAL_CFLAGS += -DUSE_RIL_VERSION_10		
-BOARD_GLOBAL_CPPFLAGS += -DUSE_RIL_VERSION_10
-
 # NFC
 BOARD_NFC_CHIPSET := pn547
 NXP_CHIP_TYPE := 1
@@ -47,3 +43,6 @@ NXP_CHIP_TYPE := 1
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_ef60
 TARGET_RECOVERY_DEVICE_MODULES := libinit_ef60
+
+# Ril class
+BOARD_RIL_CLASS := ../../../device/pantech/ef60/ril
