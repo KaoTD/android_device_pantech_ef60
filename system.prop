@@ -1,2 +1,5 @@
 #OTA
-cm.updater.uri=https://raw.githubusercontent.com/hoalamha/CMUpdater-API/lineage/ef60/api.json
+#cm.updater.uri=https://raw.githubusercontent.com/hoalamha/CMUpdater-API/lineage/ef60/api.json
+
+# RIL class override
+ro.telephony.ril_class=VegaRIL
